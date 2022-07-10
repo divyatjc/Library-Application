@@ -63,3 +63,6 @@ mongoose.connect(MONGODB_URI,{useNewUrlParser: true,useUnifiedTopology: true})
 .catch((err)=>{
     console.log('failed to conncet to mongoDB atlas',err);
 })
+
+heroku buildpacks:set heroku/js
+heroku create myapp --buildpack heroku/python
